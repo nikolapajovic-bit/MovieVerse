@@ -8,66 +8,66 @@
       <input
         type="email"
         matInput
-        placeholder="Input your email"
+        placeholder="Unesite email"
         [(ngModel)]="email"
       />
     </mat-form-field>
     <mat-form-field class="full-width">
-      <mat-label>First Name</mat-label>
+      <mat-label>Ime</mat-label>
       <input
         type="text"
         matInput
-        placeholder="Input your name"
+        placeholder="Unesite ime"
         [(ngModel)]="firstName"
       />
     </mat-form-field>
     <mat-form-field class="full-width">
-      <mat-label>Last Name</mat-label>
+      <mat-label>Prezime</mat-label>
       <input
         type="text"
         matInput
-        placeholder="Input your surname"
+        placeholder="Unesite prezime"
         [(ngModel)]="lastName"
       />
     </mat-form-field>
     <mat-form-field class="full-width">
-      <mat-label>Phone</mat-label>
+      <mat-label>Telefon</mat-label>
       <input
         type="tel"
         matInput
-        placeholder="Input your phone"
+        placeholder="Unesite broj telefona"
         [(ngModel)]="phone"
       />
     </mat-form-field>
     <mat-form-field class="full-width">
-      <mat-label>Address</mat-label>
+      <mat-label>Adresa</mat-label>
       <input
         type="text"
         matInput
-        placeholder="Input your address"
+        placeholder="Unesite adresu"
         [(ngModel)]="address"
       />
     </mat-form-field>
     <mat-form-field class="full-width">
-      <mat-label>Password</mat-label>
+      <mat-label>Sifra</mat-label>
       <input
         type="password"
         matInput
-        placeholder="Input your password"
+        placeholder="Unesite sifru"
         [(ngModel)]="password"
       />
     </mat-form-field>
     <mat-form-field class="full-width">
-      <mat-label>Repeat password</mat-label>
+      <mat-label>Ponovite sifru</mat-label>
       <input
         type="password"
         matInput
-        placeholder="Repeat your password"
+        placeholder="Ponovite Vasu sifru"
         [(ngModel)]="repeatPassword"
       />
     </mat-form-field>
     <mat-form-field class="full-width">
-      <mat-label>Select favourite genre</mat-label>
+      <mat-label>Izaberite omiljeni zanr</mat-label>
       <mat-select [(ngModel)]="genre">
         <mat-option *ngFor="let gen of genresList" [value]="gen">
           {{ gen }}
@@ -76,7 +76,7 @@
     </mat-form-field>
   </mat-card-content>
   <mat-card-actions>
-    <button type="button" mat-button (click)="doSignup()">Signup now</button>
-    <a mat-button routerLink="/login"> Already have an account? Login now </a>
+    <button type="button" mat-button (click)="doSignup()">Signup</button>
+    <a mat-button routerLink="/login"> Imate nalog? Ulogujte se. </a>
   </mat-card-actions>
 </mat-card>
