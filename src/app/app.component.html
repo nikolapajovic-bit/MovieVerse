@@ -1,18 +1,18 @@
 <mat-toolbar color="primary">
   <span><i class="fa-solid fa-film"></i> MovieVerse</span>
   <span class="spacer"></span>
-  <a routerLink="/" mat-button> <i class="fa-solid fa-house"></i> Home </a>
+  <a routerLink="/" mat-button> <i class="fa-solid fa-house"></i> Pocetna </a>
   <a routerLink="/search" mat-button>
-    <i class="fa-solid fa-search"></i> Search
+    <i class="fa-solid fa-search"></i> Pretraga
   </a>
   <a routerLink="/login" *ngIf="!service.getActiveUser()" mat-button>
     <i class="fa-solid fa-right-to-bracket"></i> Login
   </a>
   <a routerLink="/user" mat-button>
-    <i class="fa-solid fa-user"></i> Profile
+    <i class="fa-solid fa-user"></i> Profil
   </a>
   <a routerLink="/about" mat-button>
-    <i class="fa-solid fa-circle-info"></i> About
+    <i class="fa-solid fa-circle-info"></i> O nama
   </a>
   <button mat-button *ngIf="service.getActiveUser()" (click)="doLogout()">
     <i class="fa-solid fa-right-from-bracket"></i> Logout
