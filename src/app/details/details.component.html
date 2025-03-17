@@ -11,13 +11,13 @@
             {{ movie.description }}
           </span>
           <mat-list-item>
-            <span matListItemTitle>Director:</span>
+            <span matListItemTitle>Reziser:</span>
             <span matListItemLine>
               {{ movie.director.name }}
             </span>
           </mat-list-item>
           <mat-list-item>
-            <span matListItemTitle>Actors:</span>
+            <span matListItemTitle>Glumci:</span>
             <span matListItemLine>
               <ng-container
                 *ngFor="let actor of movie.movieActors; let last = last"
@@ -27,7 +27,7 @@
             </span>
           </mat-list-item>
           <mat-list-item>
-            <span matListItemTitle>Run Time:</span>
+            <span matListItemTitle>Vreme trajanja:</span>
             <span matListItemLine> {{ movie.runTime }} minutes </span>
           </mat-list-item>
           <mat-list-item>
