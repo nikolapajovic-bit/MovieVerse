@@ -46,8 +46,8 @@ export class OrderComponent {
 
   public doOrder() {
     Swal.fire({
-      title: `Place an order for ${this.movie?.title}?`,
-      text: 'Orders can be canceled any time from your user profile!',
+      title: `Narucite karte za ${this.movie?.title}?`,
+      text: 'Narudzbine mozete otkazati putem Vaseg profila!',
       icon: 'warning',
       showCancelButton: true,
       customClass: {
@@ -55,7 +55,7 @@ export class OrderComponent {
       },
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Order!',
+      confirmButtonText: 'Kupi!',
     }).then((result) => {
       if (result.isConfirmed) {
         const result = UserService.createOrder({
@@ -71,8 +71,8 @@ export class OrderComponent {
         result
           ? this.router.navigate(['/user'])
           : Swal.fire({
-              title: 'Failed creating an order',
-              text: 'Something is wrong with your order!',
+              title: 'Greska u kreiranju porudzbine',
+              text: 'Nesto nije u redu sa Vasom narudzbinom!',
               icon: 'error',
             });
       }
