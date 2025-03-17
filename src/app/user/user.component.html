@@ -146,7 +146,7 @@
           <th mat-header-cell *matHeaderCellDef>Status:</th>
           <td mat-cell *matCellDef="let element">
             <div *ngIf="element.status == 'paid' && element.rating == null">
-              Paid
+              Placeno
             </div>
             <div *ngIf="element.status == 'paid' && element.rating == true">
               <i class="fa-solid fa-thumbs-up"></i>
@@ -167,7 +167,7 @@
             </a>
             <div *ngIf="element.status == 'ordered'">
               <button type="button" mat-button (click)="doPay(element)">
-                <span class="link-name">Pay</span>
+                <span class="link-name">Plati</span>
               </button>
               <button type="button" mat-button (click)="doCancel(element)">
                 <span class="link-name">Otkazi</span>
