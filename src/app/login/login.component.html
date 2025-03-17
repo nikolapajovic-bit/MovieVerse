@@ -8,24 +8,24 @@
       <input
         type="email"
         matInput
-        placeholder="Input your email"
+        placeholder="Unesite email"
         [(ngModel)]="email"
       />
     </mat-form-field>
     <mat-form-field class="full-width">
-      <mat-label>Password</mat-label>
+      <mat-label>Sifra</mat-label>
       <input
         type="password"
         matInput
-        placeholder="Input your password"
+        placeholder="Unesite sifru"
         [(ngModel)]="password"
       />
     </mat-form-field>
   </mat-card-content>
   <mat-card-actions>
-    <button type="button" mat-button (click)="doLogin()">Login now</button>
+    <button type="button" mat-button (click)="doLogin()">Ulogujte se!</button>
     <a mat-button routerLink="/signup">
-      Don't have an account? Create one now.
+      Nemate nalog? Napravite sada.
     </a>
   </mat-card-actions>
 </mat-card>
