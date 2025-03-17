@@ -1,19 +1,19 @@
 <div class="wrapper" *ngIf="dataSource">
-  <h1>Search</h1>
+  <h1>Pretrazi filmove</h1>
   <mat-card class="search-card">
     <mat-card-content>
       <mat-form-field class="search-input">
-        <mat-label>Search</mat-label>
+        <mat-label>Pretraga</mat-label>
         <input
           type="text"
           matInput
-          placeholder="Enter search criteria"
+          placeholder="Unesite naziv filma"
           (keyup)="doFilterChain()"
           [(ngModel)]="userInput"
         />
       </mat-form-field>
       <mat-form-field class="search-input">
-        <mat-label>Select actors</mat-label>
+        <mat-label>Izaberite glumca</mat-label>
         <mat-select
           (selectionChange)="doFilterChain()"
           [(ngModel)]="selectedActors"
@@ -24,7 +24,7 @@
         </mat-select>
       </mat-form-field>
       <mat-form-field class="search-input">
-        <mat-label>Select directors</mat-label>
+        <mat-label>Izaberite rezisera</mat-label>
         <mat-select
           (selectionChange)="doFilterChain()"
           [(ngModel)]="selectedDirector"
@@ -35,7 +35,7 @@
         </mat-select>
       </mat-form-field>
       <mat-form-field class="search-input">
-        <mat-label>Select genre</mat-label>
+        <mat-label>Izaberite zanr</mat-label>
         <mat-select
           (selectionChange)="doFilterChain()"
           [(ngModel)]="selectedGenre"
@@ -46,7 +46,7 @@
         </mat-select>
       </mat-form-field>
       <mat-form-field class="search-input">
-        <mat-label>Select run time</mat-label>
+        <mat-label>Izaberite vreme trajanja</mat-label>
         <mat-select
           (selectionChange)="doFilterChain()"
           [(ngModel)]="selectedRunTime"
@@ -58,7 +58,7 @@
       </mat-form-field>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-button (click)="doReset()">Reset all criteria</button>
+      <button mat-button (click)="doReset()">Resetuj filtere</button>
     </mat-card-actions>
   </mat-card>
 
@@ -71,35 +71,35 @@
     </ng-container>
 
     <ng-container matColumnDef="title">
-      <th mat-header-cell *matHeaderCellDef>Title</th>
+      <th mat-header-cell *matHeaderCellDef>Naslov</th>
       <td mat-cell *matCellDef="let element">
         {{ element.title }}
       </td>
     </ng-container>
 
     <ng-container matColumnDef="movieActors">
-      <th mat-header-cell *matHeaderCellDef>Actors</th>
+      <th mat-header-cell *matHeaderCellDef>Glumci</th>
       <td mat-cell *matCellDef="let element">
         {{ getActorNames(element) }}
       </td>
     </ng-container>
 
     <ng-container matColumnDef="director">
-      <th mat-header-cell *matHeaderCellDef>Directors</th>
+      <th mat-header-cell *matHeaderCellDef>Reziseri</th>
       <td mat-cell *matCellDef="let element">
         {{ element.director.name }}
       </td>
     </ng-container>
 
     <ng-container matColumnDef="movieGenres">
-      <th mat-header-cell *matHeaderCellDef>Genre</th>
+      <th mat-header-cell *matHeaderCellDef>Zanrovi</th>
       <td mat-cell *matCellDef="let element">
         {{ getMovieGenres(element) }}
       </td>
     </ng-container>
 
     <ng-container matColumnDef="runTime">
-      <th mat-header-cell *matHeaderCellDef>Run time</th>
+      <th mat-header-cell *matHeaderCellDef>Vreme trajanja</th>
       <td mat-cell *matCellDef="let element">{{ element.runTime }} minutes</td>
     </ng-container>
 
@@ -111,7 +111,7 @@
           color="primary"
           [routerLink]="[`/details/${element.movieId}`]"
         >
-          <i class="fa-solid fa-square-up-right"></i> View Details
+          <i class="fa-solid fa-square-up-right"></i> Detalji
         </button>
       </td>
     </ng-container>
@@ -120,7 +120,7 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
   </table>
   <p *ngIf="dataSource.length == 0">
-    Could not find any search criteria requested!
+    Nisu pronadjeni rezultati za datu pretragu!
   </p>
 </div>
 
