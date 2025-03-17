@@ -1,0 +1,96 @@
+.user-card {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1e1e1e;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.user-card img.example-header-image {
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+}
+
+.user-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+button {
+    background: #007bff;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #444;
+    color: #fff;
+}
+
+th {
+    background: #1e1e1e;
+}
+
+.price, .total {
+    font-weight: bold;
+    color: #00c853;
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.actions button, .actions a {
+    margin-right: 5px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    min-width: 90px;
+}
+
+.actions a {
+    display: inline-block;
+    background: #007bff;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+}
+
+.actions a:hover {
+    background: #0056b3;
+}
+
+.no-order {
+    text-align: center;
+    padding: 20px;
+    background: #1e1e1e;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.cyan:hover {
+    text-decoration: underline;
+}

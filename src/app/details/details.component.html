@@ -1,0 +1,50 @@
+<div class="wrapper" *ngIf="movie">
+  <h1>{{ movie.title }}</h1>
+  <div class="movie-content">
+    <img [src]="movie.poster" alt="movie.originalTitle" />
+    <mat-card class="movie-card" appearance="outlined">
+      <mat-card-content style="color: white">
+        <h3>Informacije o filmu</h3>
+        <mat-list role="list">
+          <span style="font-weight: bold">Opis: &nbsp;</span>
+          <span>
+            {{ movie.description }}
+          </span>
+          <mat-list-item>
+            <span matListItemTitle>Director:</span>
+            <span matListItemLine>
+              {{ movie.director.name }}
+            </span>
+          </mat-list-item>
+          <mat-list-item>
+            <span matListItemTitle>Actors:</span>
+            <span matListItemLine>
+              <ng-container
+                *ngFor="let actor of movie.movieActors; let last = last"
+              >
+                {{ actor.actor.name }}<span *ngIf="!last">, </span>
+              </ng-container>
+            </span>
+          </mat-list-item>
+          <mat-list-item>
+            <span matListItemTitle>Run Time:</span>
+            <span matListItemLine> {{ movie.runTime }} minutes </span>
+          </mat-list-item>
+          <mat-list-item>
+            <span matListItemTitle>Datum projekcije: </span>
+            <span matListItemLine>
+              {{ utils.formatDate(movie.startDate) }}
+            </span>
+          </mat-list-item>
+        </mat-list>
+      </mat-card-content>
+      <mat-card-actions>
+        <a mat-button [routerLink]="['/details/' + movie.movieId + '/order']">
+          <i class="fa-solid fa-credit-card"></i> Buy now!
+        </a>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
+
+<app-loading *ngIf="!movie" />

@@ -1,0 +1,67 @@
+h1 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.search-card {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-input {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+mat-card-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+button[mat-button] {
+    color: skyblue;
+}
+
+table {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+th,td {
+    text-align: left;
+    padding: 12px;
+}
+
+th {
+    background-color: #2196f3;
+    color: white;
+}
+
+td {
+    color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+mat-option {
+    color: black !important;
+    background-color: white !important;
+}
+
+mat-option:hover {
+    color: #2196f3 !important;
+}
+
+@media (max-width: 768px) {
+    table {
+        font-size: 14px;
+    }
+    th, td {
+        padding: 8px;
+    }
+}

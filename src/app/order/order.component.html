@@ -1,0 +1,53 @@
+<div *ngIf="movie">
+  <mat-card class="order-card" appearance="outlined">
+    <img mat-card-image [src]="movie.poster" [alt]="movie.originalTitle" />
+    <mat-card-content>
+      <h3>New order - {{ movie.title }}</h3>
+      <mat-form-field class="full-width">
+        <mat-label>Naslov</mat-label>
+        <input type="text" matInput [value]="movie.title" disabled />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <mat-label>Datum pocetka:</mat-label>
+        <input
+          type="text"
+          matInput
+          [value]="utils.formatDate(movie.startDate)"
+          disabled
+        />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <mat-label>Izaberite sediste</mat-label>
+        <mat-select [(ngModel)]="selectedPrice">
+          <mat-option [value]="150">Obicna sedista - 150 RSD</mat-option>
+          <mat-option [value]="300">VIP sedista - 300 RSD</mat-option>
+          <mat-option [value]="650">Lovebox sedista - 650 RSD</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <mat-label>Broj karata:</mat-label>
+        <input
+          type="number"
+          min="1"
+          max="10"
+          matInput
+          [(ngModel)]="selectedTicketCount"
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Ukupno za uplatu</mat-label>
+        <input
+          type="number"
+          matInput
+          [value]="selectedPrice * selectedTicketCount"
+          disabled
+        />
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="doOrder()">
+        <i class="fa-solid fa-credit-card"></i> Buy now!
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

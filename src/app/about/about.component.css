@@ -1,0 +1,26 @@
+.wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 28px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: white;
+}
+
+.cyan {
+    text-decoration: none;
+}
+
+.cyan:hover {
+    text-decoration: underline;
+}
