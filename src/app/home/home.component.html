@@ -17,21 +17,21 @@
     <mat-card-content>
       <h2>{{ movie.title }}</h2>
       <p>
-        <span style="font-weight: bold">Description:</span> &nbsp;{{
+        <span style="font-weight: bold">Opis:</span> &nbsp;{{
           movie.shortDescription
         }}
       </p>
       <p>
-        <span style="font-weight: bold">Run Time:</span>
+        <span style="font-weight: bold">Vreme trajanja:</span>
         &nbsp;{{ movie.runTime }} minutes
       </p>
     </mat-card-content>
     <mat-card-actions>
       <a mat-button [routerLink]="['/details/', movie.movieId]">
-        <i class="fa-solid fa-square-up-right"></i> Details
+        <i class="fa-solid fa-square-up-right"></i> Detalji
       </a>
       <a mat-button [routerLink]="['/details/' + movie.movieId + '/order']">
-        <i class="fa-solid fa-credit-card"></i> Buy now!
+        <i class="fa-solid fa-credit-card"></i> Kupi!
       </a>
     </mat-card-actions>
   </mat-card>
